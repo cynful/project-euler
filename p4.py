@@ -16,4 +16,5 @@ for i in xrange(100, 1000):
         s = str(prod)
         if s == s[::-1] and prod > palindrome:
             palindrome = prod
+
 print palindrome

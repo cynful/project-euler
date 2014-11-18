@@ -24,4 +24,5 @@ lpf = 0
 for i in range(1, sqrt):
     if isPrime(i) and largePrime%i == 0:
        lpf = i
+
 print lpf
