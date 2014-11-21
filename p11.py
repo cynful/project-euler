@@ -35,18 +35,19 @@ grid = (
 )
 
 gridlist = grid.split()
+gridsize = 20
 gridplace = 0
 matrix = []
-for r in range(0, 20):
+for r in range(0, gridsize):
     row = []
-    for c in range(0, 20):
+    for c in range(0, gridsize):
         row.append(int(gridlist[gridplace]))
         gridplace += 1
     matrix.append(row)
 
 largeProd = 0
-for r in range(0, 20):
-    for c in range(0, 20):
+for r in range(0, gridsize):
+    for c in range(0, gridsize):
         if c+3 < 20:
             r1 = matrix[r][c]
             r2 = matrix[r][c+1]

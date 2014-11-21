@@ -47,8 +47,9 @@ numMap = {
 1000: 'thousand',
 }
 
+maxcount = 1000
 sum = 0
-for i in range(1, 1000+1):
+for i in range(1, maxcount+1):
     r = i
     britStd = False
     if r/1000 != 0:

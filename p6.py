@@ -16,9 +16,10 @@ natural numbers and the square of the sum.
 """
 #!/usr/bin/python
 
+maxNums = 100
 sumsquare = 0
 squaresum = 0
-for i in range(1, 101):
+for i in range(1, maxNums+1):
     sumsquare += (i**2)
     squaresum += i
 squaresum = squaresum**2

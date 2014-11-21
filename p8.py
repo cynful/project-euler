@@ -34,19 +34,20 @@ thousandDigit = (
 )
 
 consecutive = []
+maxadjacent = 13
 largeProd = 0
 i = 0
 j = 0
 while i < 1000:
-    if i+13 < 1000:
-        for j in range(0, 13):
+    if i+maxadjacent < 1000:
+        for j in range(0, maxadjacent):
             if thousandDigit[i+j] != "0":
                 consecutive.append(int(thousandDigit[i+j]))
             else:
                 consecutive = []
                 i += j
                 break
-        if len(consecutive) == 13:
+        if len(consecutive) == maxadjacent:
             prod = 1
             for n in consecutive:
                 prod *= n

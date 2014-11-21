@@ -34,9 +34,10 @@ def numFactors(n):
         factors -= 1 
     return factors
 
+maxdivisors = 500
 nth = 0
 i = 1
-while numFactors(nth) <= 500:
+while numFactors(nth) <= maxdivisors:
     nth += i
     i += 1
 

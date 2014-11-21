@@ -23,8 +23,9 @@ def primeFactors(n):
     
     return primefactors
 
+numDivisors = 20
 minfactors = {}
-for i in range(1, 21):
+for i in range(1, numDivisors+1):
     primefactors = primeFactors(i)
     for key in primefactors:
         val = primefactors.count(key)

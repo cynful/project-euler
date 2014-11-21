@@ -9,9 +9,11 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 """
 #!/usr/bin/python
 
+minDigits = 100
+maxDigits = 999
 palindrome = 0
-for i in range(100, 1000):
-    for j in range(100, 1000):
+for i in range(minDigits, maxDigits+1):
+    for j in range(minDigits, maxDigits+1):
         prod = i*j
         s = str(prod)
         if s == s[::-1] and prod > palindrome:

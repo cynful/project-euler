@@ -10,9 +10,10 @@ How many such routes are there through a 20x20 grid?
 """
 #!/usr/bin/python
 
+gridsize = 20
 paths = 1
-for i in range(0, 20):
-    paths *= (2*20) - i
+for i in range(0, gridsize):
+    paths *= (2*gridsize) - i
     paths /= i + 1
 
 print paths
