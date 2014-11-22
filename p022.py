@@ -16,4 +16,19 @@ What is the total of all the name scores in the file?
 """
 #!/usr/bin/python
 
+names = open('p022_names.txt', 'r')
+strNames = names.read()
+names.close()
+strNames = strNames.replace("\"", "")
+strNames = strNames.replace(",", " ")
+listNames = strNames.split()
+listNames.sort()
 
+totalscore = 0
+for name in listNames:
+    value = 0
+    for char in name:
+        value += ord(char)-64
+    totalscore += (listNames.index(name)+1)*value
+
+print totalscore
