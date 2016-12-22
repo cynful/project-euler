@@ -1,3 +1,7 @@
 # vim swp #
 ###########
 *.swp
+
+# account recovery key #
+########################
+acctrecoverykey.txt
