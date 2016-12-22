@@ -11,6 +11,7 @@ What is the greatest product of four adjacent numbers in the same direction
 (up, down, left, right, or diagonally) in the 20x20 grid?
 """
 #!/usr/bin/python
+
 grid = (
 "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08 "
 "49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00 "
@@ -34,49 +35,45 @@ grid = (
 "01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48 "
 )
 
-gridlist = grid.split()
-gridsize = 20
-gridplace = 0
-matrix = []
-for r in range(0, gridsize):
-    row = []
-    for c in range(0, gridsize):
-        row.append(int(gridlist[gridplace]))
-        gridplace += 1
-    matrix.append(row)
+gridmatrix = []
+with open('p011_20x20grid.txt') as file20x20grid:
+    for line in file20x20grid:
+        row = map(int,line.split())
+        gridmatrix.append(row)
 
+gridsize = 20
 largeProd = 0
 for r in range(0, gridsize):
     for c in range(0, gridsize):
         if c+3 < 20:
-            r1 = matrix[r][c]
-            r2 = matrix[r][c+1]
-            r3 = matrix[r][c+2]
-            r4 = matrix[r][c+3]
+            r1 = gridmatrix[r][c]
+            r2 = gridmatrix[r][c+1]
+            r3 = gridmatrix[r][c+2]
+            r4 = gridmatrix[r][c+3]
             prod = r1*r2*r3*r4
             if largeProd < prod:
                 largeProd = prod
         if r+3 < 20:
-            d1 = matrix[r][c]
-            d2 = matrix[r+1][c]
-            d3 = matrix[r+2][c]
-            d4 = matrix[r+3][c]
+            d1 = gridmatrix[r][c]
+            d2 = gridmatrix[r+1][c]
+            d3 = gridmatrix[r+2][c]
+            d4 = gridmatrix[r+3][c]
             prod = d1*d2*d3*d4
             if largeProd < prod:
                 largeProd = prod
         if r+3 < 20 and c+3 < 20:
-            dr1 = matrix[r][c]
-            dr2 = matrix[r+1][c+1]
-            dr3 = matrix[r+2][c+2]
-            dr4 = matrix[r+3][c+3]
+            dr1 = gridmatrix[r][c]
+            dr2 = gridmatrix[r+1][c+1]
+            dr3 = gridmatrix[r+2][c+2]
+            dr4 = gridmatrix[r+3][c+3]
             prod = dr1*dr2*dr3*dr4
             if largeProd < prod:
                 largeProd = prod
         if r+3 < 20 and c-3 >= 0:
-            dl1 = matrix[r][c]
-            dl2 = matrix[r+1][c-1]
-            dl3 = matrix[r+2][c-2]
-            dl4 = matrix[r+3][c-3]
+            dl1 = gridmatrix[r][c]
+            dl2 = gridmatrix[r+1][c-1]
+            dl3 = gridmatrix[r+2][c-2]
+            dl4 = gridmatrix[r+3][c-3]
             prod = dl1*dl2*dl3*dl4
             if largeProd < prod:
                 largeProd = prod
