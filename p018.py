@@ -21,45 +21,23 @@ and requires a clever method! ;o)
 """
 #!/usr/bin/local
 
-pyramid = (
-"75 "
-"95 64 "
-"17 47 82 "
-"18 35 87 10 "
-"20 04 82 47 65 "
-"19 01 23 75 03 34 "
-"88 02 77 73 07 63 67 "
-"99 65 04 28 06 16 70 92 "
-"41 41 26 56 83 40 80 70 33 "
-"41 48 72 33 47 32 37 16 94 29 "
-"53 71 44 65 25 43 91 52 97 51 14 "
-"70 11 33 28 77 73 17 78 39 68 17 57 "
-"91 71 52 38 17 14 91 43 58 50 27 29 48 "
-"63 66 04 68 89 53 67 30 73 16 69 87 40 31 "
-"04 62 98 27 23 09 70 98 73 93 38 53 60 04 23 "
-)
+pyrlist = []
+with open('p018_pyramid.txt') as filepyramid:
+    for line in filepyramid:
+        level = map(int, line.split())
+        pyrlist.append(level)
 
-pyrlist = pyramid.split()
-pyrsize = 15
-pyrpos = 0
-tree = []
-for i in range(0, pyrsize):
-    level = []
-    for j in range(0, i+1):
-        level.append(int(pyrlist[pyrpos]))
-        pyrpos += 1
-    tree.append(level)
-
+pyrsize = len(pyrlist)
 for i in range(pyrsize-1, 0, -1):
-    deletelvl = tree[i]
-    replacelvl = tree[i-1]
+    deletelvl = pyrlist[i]
+    replacelvl = pyrlist[i-1]
     newlvl = []
     for j in range(0, len(replacelvl)):
         left = replacelvl[j] + deletelvl[j]
         right = replacelvl[j] + deletelvl[j+1]
         newlvl.append(max(left,right))
-    tree.pop()
-    tree.pop()
-    tree.append(newlvl)
+    pyrlist.pop()
+    pyrlist.pop()
+    pyrlist.append(newlvl)
 
-print tree[0][0]
+print pyrlist[0][0]
