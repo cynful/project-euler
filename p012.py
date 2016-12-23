@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """
 Highly divisible triangular number
 Problem 12
@@ -20,7 +22,6 @@ We can see that 28 is the first triangle number to have over five divisors.
 
 What is the value of the first triangle to have over five hundred divisors?
 """
-#!/usr/bin/python
 
 import math
 

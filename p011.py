@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """
 Largest product in a grid
 Problem 11
@@ -10,7 +12,6 @@ The product of these numbers is 26 * 63 * 78 * 14 = 1788696
 What is the greatest product of four adjacent numbers in the same direction
 (up, down, left, right, or diagonally) in the 20x20 grid?
 """
-#!/usr/bin/python
 
 gridmatrix = []
 with open('p011_20x20grid.txt') as file20x20grid:

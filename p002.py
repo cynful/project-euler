@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """
 Even Fibonacci numbers
 Problem 2
@@ -9,7 +11,6 @@ two terms. By starting with 1 and 2, the first 10 terms will be:
 By considering the terms in the Fibonacci sequence whose values do not
 exceed four million, find the sum of the even-valued terms.
 """
-#!/usr/bin/python
 
 fourMillion = 4000000
 f1 = 1

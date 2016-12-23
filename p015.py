@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """
 Lattice paths
 Problem 15
@@ -8,7 +10,6 @@ corner.
 
 How many such routes are there through a 20x20 grid?
 """
-#!/usr/bin/python
 
 gridsize = 20
 paths = 1

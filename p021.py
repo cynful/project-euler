@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """
 Amicable numbers
 Problem 21
@@ -13,7 +15,6 @@ For example, the proper divisors or 220 are 1, 2, 4, 5, 10, 11, 20, 22, 44,
 
 Evaluate the sum of all the amicable numbers under 10000.
 """
-#!/usr/bin/python
 
 import math
 

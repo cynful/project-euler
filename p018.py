@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """
 Maximum path sum 1
 Problem 18
@@ -19,7 +21,6 @@ by trying every route. However, Problem 67, is the same challenge with a
 triangle containing one-hundred rows; it cannot be solved by brute force,
 and requires a clever method! ;o)
 """
-#!/usr/bin/local
 
 pyrlist = []
 with open('p018_pyramid.txt') as filepyramid:

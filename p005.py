@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """
 Smallest multiple
 Problem 5
@@ -7,7 +9,6 @@ Problem 5
 
 What is the smallest positive number that is evenly divisible by all the numbers from 1 to 20?
 """
-#!/usr/bin/python
 
 def primeFactors(n):
     primefactors = []

@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """
 Factorial digit sum
 Problem 20
@@ -9,7 +11,6 @@ and the sum of the digits in the number 10! is 3+6+2+8+8+0+0 = 27.
 
 Find the sum of the digits in the number 100!
 """
-#!/usr/bin/python
 
 factorial = 100
 prod = 1

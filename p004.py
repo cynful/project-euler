@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """
 Largest palindrome product
 Problem 4
@@ -7,7 +9,6 @@ product of two 2-digit numbers is 9009 = 91 x 99
 
 Find the largest palindrome made from the product of two 3-digit numbers.
 """
-#!/usr/bin/python
 
 minDigits = 100
 maxDigits = 999

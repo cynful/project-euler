@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """
 10001st prime
 Problem 7
@@ -7,7 +9,6 @@ that the 6th prime is 13.
 
 What is the 10001st prime number?
 """
-#!/usr/bin/python
 
 import math
 

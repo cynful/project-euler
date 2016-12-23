@@ -1,3 +1,5 @@
+#!/usr/bin/local
+
 """
 Number letter counts
 Problem 17
@@ -13,7 +15,6 @@ forty-two) contains 23 letters and 115 (one hundred and fifteen) contains 20
 letters. The use of "and" when writing out numbers is in compliance with
 British usage.
 """
-#!/usr/bin/python
 
 numMap = {
 1: 'one',

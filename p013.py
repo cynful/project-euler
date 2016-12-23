@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """
 Large sum
 Problem 13

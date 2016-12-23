@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """
 Names scores
 Problem 22
@@ -14,7 +16,6 @@ obtain a score of 938*53 = 49714.
 
 What is the total of all the name scores in the file?
 """
-#!/usr/bin/python
 
 names = open('p022_names.txt', 'r')
 strNames = names.read()

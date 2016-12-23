@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 """
 Power digit sum
 Problem 16
@@ -6,7 +8,6 @@ Problem 16
 
 What is the sum of the digits of the number 2^1000?
 """
-#!/usr/bin/python
 
 largeNum = 2**1000
 strNum = str(largeNum)
