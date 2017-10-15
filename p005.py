@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Smallest multiple
@@ -30,14 +30,14 @@ for i in range(1, numDivisors+1):
     primefactors = primeFactors(i)
     for key in primefactors:
         val = primefactors.count(key)
-        if minfactors.has_key(key):
+        if key in minfactors:
             if minfactors[key] < val:
                 minfactors[key] = val
         else:
             minfactors[key] = val
 
 product = 1
-for key, val in minfactors.iteritems():
+for key, val in minfactors.items():
     product *= (key**val)
 
-print product 
+print(product)

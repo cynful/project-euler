@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Even Fibonacci numbers
@@ -23,4 +23,4 @@ while f1 <= fourMillion:
     f1 = f2
     f2 = fnext
 
-print sum
+print(sum)

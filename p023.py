@@ -14,3 +14,44 @@ Find the sum of all the positive integers which cannot be written as the sum of 
 """
 
 
+"""
+0 perfect number
+-1 deficient
+1 abundant
+"""
+def perfectNum(n):
+    divs = [1]
+    for i in range(1, n//2+1):
+        if n%i == 0:
+            divs.append(i)
+            divs.append(n//i)
+    divs = sorted(list(set(divs)))
+    del divs[-1]
+    sumdivs = 0
+    for i in divs:
+        sumdivs += i
+    if sumdivs == n:
+        return 0
+    elif sumdivs < n:
+        return -1
+    elif sumdivs > n:
+        return 1
+
+abundants = []
+upperlimit = 28123
+
+for i in range(1, upperlimit):
+    if perfectNum(i) == 1:
+        abundants.append(i)
+
+doubleabundants = list(abundants)
+twoabundants = []
+for i in abundants:
+    for j in doubleabundants:
+        if i+j < upperlimit:
+            twoabundants.append(i+j)
+    del doubleabundants[0]
+
+unique = sorted(list(set(twoabundants)))
+maxsum = sum(range(1, upperlimit))
+print(maxsum - sum(unique))

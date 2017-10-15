@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Largest palindrome product
@@ -20,4 +20,4 @@ for i in range(minDigits, maxDigits+1):
         if s == s[::-1] and prod > palindrome:
             palindrome = prod
 
-print palindrome
+print(palindrome)
