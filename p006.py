@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Sum square difference
@@ -25,5 +25,4 @@ for i in range(1, maxNums+1):
     squaresum += i
 squaresum = squaresum**2
 
-print squaresum - sumsquare
-
+print (squaresum - sumsquare)

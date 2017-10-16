@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Special Pythagorean triplet
@@ -16,11 +16,11 @@ Find the product abc.
 
 def pythagoreanTriplet():
     sum = 1000
-    for a in range(1, sum/3):
+    for a in range(1, int(sum/3)):
         b = a+1
-        for b in range(1, sum/2):
+        for b in range(1, int(sum/2)):
             c = sum - a - b
             if a**2 + b**2 == c**2:
                 return a*b*c
 
-print pythagoreanTriplet()
+print(pythagoreanTriplet())

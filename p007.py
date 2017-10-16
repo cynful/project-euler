@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 10001st prime
@@ -28,4 +28,4 @@ while primes <= primePlace:
     if isPrime(i):
         primes += 1
 
-print i
+print(i)

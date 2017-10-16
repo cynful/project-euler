@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Largest product in a series
@@ -39,4 +39,4 @@ while i < 1000:
     consecutive = []
     i += 1
 
-print largeProd  
+print(largeProd)

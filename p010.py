@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Summation of primes
@@ -17,9 +17,9 @@ def isPrime(n):
     return all(n%i for i in range(3, int(math.sqrt(n))+1, 2))
 
 twoMillion = 2000000
-sum = 0
+total = 0
 for i in range(1, twoMillion+1):
     if isPrime(i):
-        sum += i
+        total += i
 
-print sum
+print(total)
