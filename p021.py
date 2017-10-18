@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Amicable numbers
@@ -19,24 +19,24 @@ Evaluate the sum of all the amicable numbers under 10000.
 import math
 
 def d(n):
-    sum = 0
+    divisorsum = 0
     sqrt = int(math.sqrt(n))
     if n == sqrt*sqrt:
-        sum += sqrt
+        divisorsum += sqrt
     for i in range(1, sqrt):
         if n%i == 0:
             if i == 1:
-                sum += i
+                divisorsum += i
             else:
-                sum += i + (n/i)
-    return sum
+                divisorsum += i + (n//i)
+    return divisorsum
 
-maxAmicable = 10000
-sum = 0
-for a in range(1, maxAmicable+1):
+amicableLimit = 10000
+amicablesum = 0
+for a in range(1, amicableLimit+1):
     b = d(a)
-    if b > a and b <= maxAmicable:
+    if b > a and b <= amicableLimit:
         if d(b) == a:
-            sum += a + b
+            amicablesum += a + b
 
-print sum
+print(amicablesum)

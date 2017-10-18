@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 1000-digit Fibonacci number
@@ -26,10 +26,13 @@ The 12th term, F_12, is the first term to contain three digits.
 What is the index of the first term in the Fibonacci sequence to contain 1000 digits?
 """
 
-from math import pow
-
 first = 1
 second = 1
-index = 2
 fibsum = first + second
-while fibsum 
+index = 3
+while len(str(fibsum)) < 1000:
+    first = second
+    second = fibsum
+    fibsum = first + second
+    index += 1
+print(index)

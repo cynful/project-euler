@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Names scores
@@ -32,4 +32,4 @@ for name in listNames:
         value += ord(char)-64
     totalscore += (listNames.index(name)+1)*value
 
-print totalscore
+print(totalscore)
