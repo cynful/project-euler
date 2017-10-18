@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Maximum path sum 1
@@ -25,7 +25,7 @@ and requires a clever method! ;o)
 pyrlist = []
 with open('p018_pyramid.txt') as filepyramid:
     for line in filepyramid:
-        level = map(int, line.split())
+        level = list(map(int, line.split()))
         pyrlist.append(level)
 
 pyrsize = len(pyrlist)
@@ -41,4 +41,4 @@ for i in range(pyrsize-1, 0, -1):
     pyrlist.pop()
     pyrlist.append(newlvl)
 
-print pyrlist[0][0]
+print(pyrlist[0][0])

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Power digit sum
@@ -11,8 +11,8 @@ What is the sum of the digits of the number 2^1000?
 
 largeNum = 2**1000
 strNum = str(largeNum)
-sum = 0
+digitsum = 0
 for i in strNum:
-    sum += int(i)
+    digitsum += int(i)
 
-print sum
+print(digitsum)

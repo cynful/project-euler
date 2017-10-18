@@ -1,4 +1,4 @@
-#!/usr/bin/local
+#!/usr/bin/env python
 
 """
 Number letter counts
@@ -49,32 +49,32 @@ numMap = {
 }
 
 maxcount = 1000
-sum = 0
+charcount = 0
 for i in range(1, maxcount+1):
     r = i
     britStd = False
-    if r/1000 != 0:
-        q = r/1000
-        sum += len(numMap[q] + numMap[1000])
+    if r//1000 != 0:
+        q = r//1000
+        charcount += len(numMap[q] + numMap[1000])
         r %= 1000
-    if r/100 != 0:
-        q = r/100
-        sum += len(numMap[q] + numMap[100])
+    if r//100 != 0:
+        q = r//100
+        charcount += len(numMap[q] + numMap[100])
         r %= 100
         if r != 0:
             britStd = True
     if britStd:
-        sum += len('and')
-    if r/10 >= 2:
-        q = r/10
-        sum += len(numMap[q*10])
+        charcount += len('and')
+    if r//10 >= 2:
+        q = r//10
+        charcount += len(numMap[q*10])
         r %= 10
-    if r/10 == 1:
-        q = r/10
+    if r//10 == 1:
+        q = r//10
         r %= 10
-        sum += len(numMap[q*10+r])
+        charcount += len(numMap[q*10+r])
         r = 0
     if r != 0:
-        sum += len(numMap[r])
+        charcount += len(numMap[r])
 
-print sum
+print(charcount)

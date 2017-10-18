@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Counting Sundays
@@ -34,4 +34,4 @@ for i in range(begin, end+1):
         if date.weekday() == sunday:
             sundays += 1
 
-print sundays
+print(sundays)

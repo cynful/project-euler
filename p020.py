@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Factorial digit sum
@@ -17,8 +17,8 @@ prod = 1
 for i in range(1, factorial+1):
     prod *= i
 
-sum = 0
+digitsum = 0
 for i in str(prod):
-    sum += int(i)
+    digitsum += int(i)
 
-print sum
+print(digitsum)
