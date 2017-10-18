@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Highly divisible triangular number
@@ -42,4 +42,4 @@ while numFactors(nth) <= maxdivisors:
     nth += i
     i += 1
 
-print nth
+print(nth)

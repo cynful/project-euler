@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Lattice paths
@@ -17,4 +17,4 @@ for i in range(0, gridsize):
     paths *= (2*gridsize) - i
     paths /= i + 1
 
-print paths
+print(int(paths))

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Largest product in a grid
@@ -16,7 +16,7 @@ What is the greatest product of four adjacent numbers in the same direction
 gridmatrix = []
 with open('p011_20x20grid.txt') as file20x20grid:
     for line in file20x20grid:
-        row = map(int, line.split())
+        row = list(map(int, line.split()))
         gridmatrix.append(row)
 
 gridsize = 20
@@ -56,4 +56,4 @@ for r in range(0, gridsize):
             if largeProd < prod:
                 largeProd = prod
 
-print largeProd
+print(largeProd)

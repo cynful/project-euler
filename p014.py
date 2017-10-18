@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Longest Collatz sequence
@@ -42,4 +42,4 @@ for i in range(1, oneMill):
         chainStart = i
         longestChain = chain
 
-print chainStart
+print(chainStart)

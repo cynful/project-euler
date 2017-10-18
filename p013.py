@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Large sum
@@ -18,4 +18,4 @@ sum = 0
 for n in list50digit:
     sum += n
 
-print str(sum)[0:10]
+print(str(sum)[0:10])
